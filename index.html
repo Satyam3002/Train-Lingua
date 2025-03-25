@@ -927,6 +927,115 @@
             width: 100%;
         }
 
+        /* Main dropdown styling */
+        .nav-menu .sub-menu {
+            display: none;
+            position: absolute;
+            background: #f8f9fa;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Show dropdown on hover */
+        .nav-menu li:hover>.sub-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Nested dropdown positioning */
+        .nav-menu .sub-menu .sub-menu {
+            left: 100%;
+            top: -8px;
+            /* Aligns with parent menu */
+        }
+
+        /* Menu item with children */
+        .nav-menu .menu-item-has-children {
+            position: relative;
+        }
+
+        /* Add arrow for items with submenu */
+        .nav-menu .menu-item-has-children>a:after {
+            content: '▾';
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        /* Arrow for nested submenus */
+        .nav-menu .sub-menu .menu-item-has-children>a:after {
+            content: '▸';
+            float: right;
+        }
+
+        /* Individual menu items */
+        .nav-menu .sub-menu li {
+            display: block;
+            width: 100%;
+        }
+
+        /* Menu links styling */
+        .nav-menu .sub-menu a {
+            padding: 12px 20px;
+            display: block;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect for menu items */
+        .nav-menu .sub-menu a:hover {
+            background: #e9ecef;
+            color: #2b6cb0;
+            transform: translateX(5px);
+        }
+
+        /* First level dropdown specific styling */
+        .nav-menu>li>.sub-menu {
+            margin-top: 10px;
+        }
+
+        /* Second level dropdown specific styling */
+        .nav-menu .sub-menu .sub-menu {
+            background: #ffffff;
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add divider between menu items */
+        .nav-menu .sub-menu li:not(:last-child) {
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* Optional: Add hover indication for parent items */
+        .nav-menu .menu-item-has-children:hover>a {
+            color: #2b6cb0;
+        }
+
+        /* Optional: Style for currently active menu items */
+        .nav-menu .sub-menu .current-menu-item>a {
+            background: #e9ecef;
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+
         /* Ensure background images behave consistently */
         .jet-animated-box__back {
             background-size: cover;
@@ -1226,6 +1335,42 @@
                                         <li id="menu-item-1360"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
                                             <a href="services/index.html" onClick="return true">Start Here</a>
+                                        <li id="menu-item-1360"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                            <a href="services/index.html" onClick="return true">Start Here</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#french">French</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#delf">DELF</a></li>
+                                                        <li><a href="services/index.html#tef">TEF</a></li>
+                                                        <li><a href="services/index.html#tcf">TCF</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#spanish">Spanish</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#spanish1">Spanish Course 1</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#spanish2">Spanish Course 2</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#spanish3">Spanish Course 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#german">German</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#german1">German Course 1</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#german2">German Course 2</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#german3">German Course 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         </li>
                                         <li id="menu-item-1539"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
@@ -2121,8 +2266,7 @@
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/nutrition-masterclass-build-your-perfect-diet-meal-plan-2/index.html"
-                                                                                    target="">Nutrition: Build Your
-                                                                                    Perfect Diet &amp; Meal Plan</a>
+                                                                                    target="">DELF </a>
                                                                             </h4>
                                                                             <div class="post-meta">
                                                                                 <span
@@ -2151,8 +2295,7 @@
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/nutrition-masterclass-build-your-perfect-diet-meal-plan/index.html"
-                                                                                    target="">Nutrition: Build Your
-                                                                                    Perfect Diet &amp; Meal Plan</a>
+                                                                                    target="">TEF For Canada </a>
                                                                             </h4>
                                                                             <div class="post-meta">
                                                                                 <span
@@ -2174,15 +2317,13 @@
                                                                                     loading="lazy" decoding="async"
                                                                                     class="post-thumbnail__img wp-post-image"
                                                                                     src="DELF A1 - 3.png"
-                                                                                    alt="PHP Beginners - Become a PHP Master"
-                                                                                    loading="lazy" width="550"
-                                                                                    height="362"></a>
+                                                                                    alt="TCF for Canada" loading="lazy"
+                                                                                    width="550" height="362"></a>
                                                                         </div>
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/php-for-beginners-become-a-php-master/index.html"
-                                                                                    target="">PHP Beginners - Become a
-                                                                                    PHP Master</a></h4>
+                                                                                    target="">TCF for Canada </a></h4>
                                                                             <div class="post-meta">
                                                                                 <span
                                                                                     class="post__date post-meta__item"><a
