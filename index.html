@@ -828,6 +828,126 @@
             color: #222222;
         }
 
+        /* Make the container flex to equalize column heights */
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* Ensure columns are equal width */
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+
+        /* Set animated boxes to fill their containers */
+        .jet-animated-box {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Ensure front and back sides fill the animated box */
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            width: 100%;
+        }
+
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+            /* Ensures columns stretch to the tallest height */
+        }
+
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            /* Forces equal width */
+            max-width: 33.33%;
+            /* Prevents overflow */
+        }
+
+        .jet-animated-box {
+            height: 100%;
+            /* Fills the column height */
+            width: 100%;
+            /* Ensures full column width */
+        }
+
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            /* Both sides match the container height */
+            width: 100%;
+            /* Ensures full width */
+        }
+
+        .jet-animated-box__back {
+            background-size: cover;
+            /* Scales image to cover the area */
+            background-position: center;
+            /* Centers the image */
+        }
+
+        /* Ensure columns are equal in height and width */
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+
+        /* Standardize animated box dimensions */
+        .jet-animated-box {
+            height: 100%;
+            width: 100%;
+        }
+
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Style inner content */
+        .jet-animated-box__inner {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .jet-animated-box {
+            height: 100%;
+            min-height: 400px;
+            width: 100%;
+        }
+
+        /* Ensure background images behave consistently */
+        .jet-animated-box__back {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .jet-animated-box__inner {
+            padding: 20px;
+            /* Adds breathing room around content */
+            height: 100%;
+            /* Ensures inner div fills the box */
+            display: flex;
+            /* Enables vertical centering */
+            flex-direction: column;
+            /* Stacks content vertically */
+            justify-content: center;
+            /* Centers content vertically */
+            align-items: center;
+            /* Centers content horizontally */
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -1378,7 +1498,8 @@
                                                             class="jet-animated-box jet-box-effect-7"
                                                             data-settings='{&quot;widgetId&quot;:&quot;fc8f4d3&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'>
                                                             <div id="jet-animated-box__front-fc8f4d3"
-                                                                class="jet-animated-box__front">
+                                                                class="jet-animated-box__front"
+                                                                style="background-image: url(''); background-size: cover; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1400,7 +1521,9 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-fc8f4d3"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled design - 3.png'); background-ver; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1453,7 +1576,7 @@
                                                                             class="jet-animated-box__description jet-animated-box__description--front">
                                                                             A positive and engaging environment is
                                                                             essential for making language learning
-                                                                            fun, interactive, and effective.
+                                                                            fun and interactive
 
                                                                         </p>
                                                                     </div>
@@ -1461,7 +1584,9 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-56b1cc1"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled\ design\ -\ 2.png'); background-size: cover; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1525,7 +1650,8 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-dc3f5be"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled\ design\ -\ 1.png'); background-size: cover; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
