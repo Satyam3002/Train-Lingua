@@ -828,6 +828,235 @@
             color: #222222;
         }
 
+        /* Make the container flex to equalize column heights */
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+        }
+
+        /* Ensure columns are equal width */
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+
+        /* Set animated boxes to fill their containers */
+        .jet-animated-box {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Ensure front and back sides fill the animated box */
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            width: 100%;
+        }
+
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+            /* Ensures columns stretch to the tallest height */
+        }
+
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            /* Forces equal width */
+            max-width: 33.33%;
+            /* Prevents overflow */
+        }
+
+        .jet-animated-box {
+            height: 100%;
+            /* Fills the column height */
+            width: 100%;
+            /* Ensures full column width */
+        }
+
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            /* Both sides match the container height */
+            width: 100%;
+            /* Ensures full width */
+        }
+
+        .jet-animated-box__back {
+            background-size: cover;
+            /* Scales image to cover the area */
+            background-position: center;
+            /* Centers the image */
+        }
+
+        /* Ensure columns are equal in height and width */
+        .elementor-container {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .elementor-col-33 {
+            flex: 1 1 33.33%;
+            max-width: 33.33%;
+        }
+
+        /* Standardize animated box dimensions */
+        .jet-animated-box {
+            height: 100%;
+            width: 100%;
+        }
+
+        .jet-animated-box__front,
+        .jet-animated-box__back {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Style inner content */
+        .jet-animated-box__inner {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .jet-animated-box {
+            height: 100%;
+            min-height: 400px;
+            width: 100%;
+        }
+
+        /* Main dropdown styling */
+        .nav-menu .sub-menu {
+            display: none;
+            position: absolute;
+            background: #f8f9fa;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Show dropdown on hover */
+        .nav-menu li:hover>.sub-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Nested dropdown positioning */
+        .nav-menu .sub-menu .sub-menu {
+            left: 100%;
+            top: -8px;
+            /* Aligns with parent menu */
+        }
+
+        /* Menu item with children */
+        .nav-menu .menu-item-has-children {
+            position: relative;
+        }
+
+        /* Add arrow for items with submenu */
+        .nav-menu .menu-item-has-children>a:after {
+            content: '▾';
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        /* Arrow for nested submenus */
+        .nav-menu .sub-menu .menu-item-has-children>a:after {
+            content: '▸';
+            float: right;
+        }
+
+        /* Individual menu items */
+        .nav-menu .sub-menu li {
+            display: block;
+            width: 100%;
+        }
+
+        /* Menu links styling */
+        .nav-menu .sub-menu a {
+            padding: 12px 20px;
+            display: block;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect for menu items */
+        .nav-menu .sub-menu a:hover {
+            background: #e9ecef;
+            color: #2b6cb0;
+            transform: translateX(5px);
+        }
+
+        /* First level dropdown specific styling */
+        .nav-menu>li>.sub-menu {
+            margin-top: 10px;
+        }
+
+        /* Second level dropdown specific styling */
+        .nav-menu .sub-menu .sub-menu {
+            background: #ffffff;
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add divider between menu items */
+        .nav-menu .sub-menu li:not(:last-child) {
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* Optional: Add hover indication for parent items */
+        .nav-menu .menu-item-has-children:hover>a {
+            color: #2b6cb0;
+        }
+
+        /* Optional: Style for currently active menu items */
+        .nav-menu .sub-menu .current-menu-item>a {
+            background: #e9ecef;
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+
+        /* Ensure background images behave consistently */
+        .jet-animated-box__back {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .jet-animated-box__inner {
+            padding: 20px;
+            /* Adds breathing room around content */
+            height: 100%;
+            /* Ensures inner div fills the box */
+            display: flex;
+            /* Enables vertical centering */
+            flex-direction: column;
+            /* Stacks content vertically */
+            justify-content: center;
+            /* Centers content vertically */
+            align-items: center;
+            /* Centers content horizontally */
+        }
+
         .whatsapp-float {
             position: fixed;
             bottom: 20px;
@@ -1106,6 +1335,42 @@
                                         <li id="menu-item-1360"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
                                             <a href="services/index.html" onClick="return true">Start Here</a>
+                                        <li id="menu-item-1360"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                            <a href="services/index.html" onClick="return true">Start Here</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#french">French</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#delf">DELF</a></li>
+                                                        <li><a href="services/index.html#tef">TEF</a></li>
+                                                        <li><a href="services/index.html#tcf">TCF</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#spanish">Spanish</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#spanish1">Spanish Course 1</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#spanish2">Spanish Course 2</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#spanish3">Spanish Course 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="services/index.html#german">German</a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="services/index.html#german1">German Course 1</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#german2">German Course 2</a>
+                                                        </li>
+                                                        <li><a href="services/index.html#german3">German Course 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         </li>
                                         <li id="menu-item-1539"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
@@ -1136,6 +1401,60 @@
                                             </label>
                                             <input type="submit" class="search-submit" value="Search">
                                         </form>
+                                        <!-- .site-branding -->
+                                        <nav id="site-navigation" class="main-navigation site-navigation"
+                                            role="navigation">
+                                            <div class="menu-wrap">
+                                                <div class="layout-medium"><a class="menu-toggle"> <span
+                                                            class="lines"></span> </a>
+                                                    <!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
+                                                        title="View your shopping cart"> </a>
+                                                    <!-- .shopping-cart -->
+                                                    <div class="nav-menu">
+                                                        <ul id="menu-mymenu" class="">
+                                                            <li id="menu-item-1642"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
+                                                                <a href="index.html" aria-current="page"
+                                                                    onClick="return true">Home</a>
+                                                            </li>
+                                                            <li id="menu-item-1360"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
+                                                                <a href="services/index.html"
+                                                                    onClick="return true">Start Here</a>
+                                                            </li>
+                                                            <li id="menu-item-1539"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
+                                                                <a href="courses/index.html"
+                                                                    onClick="return true">Courses</a>
+                                                            </li>
+                                                            <li id="menu-item-1358"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358">
+                                                                <a href="blog/index.html" onClick="return true">Blog</a>
+                                                            </li>
+                                                            <li id="menu-item-1828"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
+                                                                <a href="shop/index.html" onClick="return true">About
+                                                                    Us</a>
+                                                            </li>
+                                                            <li id="menu-item-1359"
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359">
+                                                                <a href="contact/index.html"
+                                                                    onClick="return true">Contact</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div> <a class="search-toggle toggle-link"></a>
+                                                    <div class="search-container">
+                                                        <div class="search-box" role="search">
+                                                            <form class="search-form" method="get"
+                                                                action="https://themes.pixelwars.org/efor/demo-06/">
+                                                                <label><span>
+                                                                        Search for </span>
+                                                                    <input type="search" id="search-field" name="s"
+                                                                        placeholder="type and hit enter">
+                                                                </label>
+                                                                <input type="submit" class="search-submit"
+                                                                    value="Search">
+                                                            </form>
 
                                         <!-- .search-form -->
                                     </div>
@@ -1400,7 +1719,9 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-fc8f4d3"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled\ design.zip\ -\ 2.png'); background-ver; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1461,7 +1782,9 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-56b1cc1"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled\ design.zip\ -\ 3.png'); background-size: cover; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1525,7 +1848,8 @@
                                                                 <div class="jet-animated-box__overlay"></div>
                                                             </div>
                                                             <div id="jet-animated-box__back-dc3f5be"
-                                                                class="jet-animated-box__back">
+                                                                class="jet-animated-box__back"
+                                                                style="background-image: url('Untitled\ design.zip\ -\ 1.png'); background-size: cover; background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1677,7 +2001,8 @@
                                                 data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:150}"
                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <h1 class="elementor-heading-title elementor-size-default">Our Best in Class Faculty</h1>
+                                                    <h1 class="elementor-heading-title elementor-size-default">Our Best
+                                                        in Class Faculty</h1>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-2135420 elementor-invisible elementor-widget elementor-widget-heading"
@@ -1727,12 +2052,22 @@
                                                                             <figure class="jet-testimonials__figure">
                                                                                 <img decoding="async"
                                                                                     class="jet-testimonials__tag-img"
-                                                                                    src="./Images/Simran.jpg"
-                                                                                    alt="a-01" loading="lazy">
+                                                                                    src="./Images/Simran.jpg" alt="a-01"
+                                                                                    loading="lazy">
                                                                             </figure>
-                                                                            <div class="jet-testimonials__comment">"Simran Kumari is a skilled Spanish language trainer with over six years of experience in teaching, translation, and interpretation. She is working as a teaching assistant. Having taught at various institutions and served as a language assistant in Spain, she specializes in interactive teaching, cultural immersion, and language acquisition strategies."</div>
+                                                                            <div class="jet-testimonials__comment">
+                                                                                "Simran Kumari is a skilled Spanish
+                                                                                language trainer with over six years of
+                                                                                experience in teaching, translation, and
+                                                                                interpretation. She is working as a
+                                                                                teaching assistant. Having taught at
+                                                                                various institutions and served as a
+                                                                                language assistant in Spain, she
+                                                                                specializes in interactive teaching,
+                                                                                cultural immersion, and language
+                                                                                acquisition strategies."</div>
                                                                             <div class="jet-testimonials__name">
-                                                                                <span>Simran Kumari 
+                                                                                <span>Simran Kumari
                                                                                 </span>
                                                                             </div>
                                                                             <div class="jet-testimonials__position">
@@ -1747,10 +2082,21 @@
                                                                             <figure class="jet-testimonials__figure">
                                                                                 <img decoding="async"
                                                                                     class="jet-testimonials__tag-img"
-                                                                                    src="./Images/Yash.jpg"
-                                                                                    alt="a-02" loading="lazy">
+                                                                                    src="./Images/Yash.jpg" alt="a-02"
+                                                                                    loading="lazy">
                                                                             </figure>
-                                                                            <div class="jet-testimonials__comment">"Yash Gehlot holds a graduate and postgraduate degree in French from Jawaharlal Nehru University, New Delhi. With more than seven years of experience, he has been training students for various French language needs, including DELF, TEF, and academic boards like IB, GCSE, and CBSE. His industry experience at Amazon further enables him to incorporate a communicative and creative approach to language teaching."</div>
+                                                                            <div class="jet-testimonials__comment">"Yash
+                                                                                Gehlot holds a graduate and postgraduate
+                                                                                degree in French from Jawaharlal Nehru
+                                                                                University, New Delhi. With more than
+                                                                                seven years of experience, he has been
+                                                                                training students for various French
+                                                                                language needs, including DELF, TEF, and
+                                                                                academic boards like IB, GCSE, and CBSE.
+                                                                                His industry experience at Amazon
+                                                                                further enables him to incorporate a
+                                                                                communicative and creative approach to
+                                                                                language teaching."</div>
                                                                             <div class="jet-testimonials__name">
                                                                                 <span>Yash Gehlot <span>
                                                                             </div>
@@ -1909,7 +2255,7 @@
                                                                                 class="post-thumbnail__link"><img
                                                                                     loading="lazy" decoding="async"
                                                                                     class="post-thumbnail__img wp-post-image"
-                                                                                    src="wp-content/uploads/sites/9/2019/05/course5-1-550x362.jpg"
+                                                                                    src="DELF A1 - 1.png"
                                                                                     alt="Nutrition: Build Your Perfect Diet &amp; Meal Plan"
                                                                                     loading="lazy" width="550"
                                                                                     height="362"></a>
@@ -1917,8 +2263,7 @@
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/nutrition-masterclass-build-your-perfect-diet-meal-plan-2/index.html"
-                                                                                    target="">Nutrition: Build Your
-                                                                                    Perfect Diet &amp; Meal Plan</a>
+                                                                                    target="">DELF </a>
                                                                             </h4>
                                                                             <div class="post-meta">
                                                                                 <span
@@ -1939,7 +2284,7 @@
                                                                                 class="post-thumbnail__link"><img
                                                                                     loading="lazy" decoding="async"
                                                                                     class="post-thumbnail__img wp-post-image"
-                                                                                    src="wp-content/uploads/sites/9/2019/05/course3-1-550x362.jpg"
+                                                                                    src="DELF A1 - 2.png"
                                                                                     alt="Nutrition: Build Your Perfect Diet &amp; Meal Plan"
                                                                                     loading="lazy" width="550"
                                                                                     height="362"></a>
@@ -1947,8 +2292,7 @@
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/nutrition-masterclass-build-your-perfect-diet-meal-plan/index.html"
-                                                                                    target="">Nutrition: Build Your
-                                                                                    Perfect Diet &amp; Meal Plan</a>
+                                                                                    target="">TEF For Canada </a>
                                                                             </h4>
                                                                             <div class="post-meta">
                                                                                 <span
@@ -1969,16 +2313,14 @@
                                                                                 class="post-thumbnail__link"><img
                                                                                     loading="lazy" decoding="async"
                                                                                     class="post-thumbnail__img wp-post-image"
-                                                                                    src="wp-content/uploads/sites/9/2019/05/course6-1-550x362.jpg"
-                                                                                    alt="PHP Beginners - Become a PHP Master"
-                                                                                    loading="lazy" width="550"
-                                                                                    height="362"></a>
+                                                                                    src="DELF A1 - 3.png"
+                                                                                    alt="TCF for Canada" loading="lazy"
+                                                                                    width="550" height="362"></a>
                                                                         </div>
                                                                         <div class="jet-posts__inner-content">
                                                                             <h4 class="entry-title"><a
                                                                                     href="courses/php-for-beginners-become-a-php-master/index.html"
-                                                                                    target="">PHP Beginners - Become a
-                                                                                    PHP Master</a></h4>
+                                                                                    target="">TCF for Canada </a></h4>
                                                                             <div class="post-meta">
                                                                                 <span
                                                                                     class="post__date post-meta__item"><a
