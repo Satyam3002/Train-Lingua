@@ -1,0 +1,190 @@
+/* TUTOR LMS CUSTOM STYLES by Pixelwars */
+.tutor-wrap.tutor-courses-wrap.tutor-container.tutor-course-filter-loop-container {
+    width: 100%;
+	}
+.site-header + .tutor-wrap {
+    margin: calc(24px + 2.0vw) auto;
+	}
+html .tutor-container {
+    padding: 0; width: 90%;
+    }
+.tutor-row {
+    margin-left: -24px; margin-right: -24px;
+    }
+.tutor-col-auto, .tutor-col, .tutor-col-3, .tutor-col-4, .tutor-col-5, .tutor-col-6, .tutor-col-7, .tutor-col-8, .tutor-col-9, .tutor-col-12 {
+    padding-left: 24px; padding-right: 24px;
+    }
+
+/* Courses */
+/* Courses with filters column fix */
+@media screen and (min-width:992px) {
+    .tutor-col-3.tutor-course-filter-container + .tutor-col-xl-8 {
+        width: 75%;
+    }
+}
+.tutor-wrap.tutor-wrap-parent.tutor-courses-wrap.tutor-container.course-archive-page {
+    padding-bottom: 10%;
+	}
+.tutor-btn:not(.tutor-is-outline).tutor-btn-disable-outline {
+    color: inherit;
+	}
+.tutor-course-archive-results-wrap strong {
+    display: none;
+	}
+.tutor-course-archive-results-wrap {
+    font-size: 26px;
+	}
+.tutor-course-filter-form select {
+    border-radius: 10px;
+	}
+.tutor-course-loop-title h2 {
+    font-size: 18px;
+	}
+.tutor-loop-author {
+	font-size: 12px;
+	}
+.tutor-loop-author .tutor-course-lising-category a {
+	text-transform: uppercase;
+	}
+.tutor-loop-rating-wrap {
+	font-size: 13px;
+	}
+.tutor-pagination-wrap a {
+	color: inherit;
+	}
+.tutor-pagination-wrap .page-numbers.current {
+    width: 58px;
+	}
+.tutor-course-loop-price>.price .tutor-loop-cart-btn-wrap a.button {
+    border: 0; font-size: 1em; text-transform: none; letter-spacing: 0; font-family: inherit;
+	}
+.tutor-single-loop-meta span {
+    font-size: 13px;
+	}
+.tutor-star-rating-group i {
+    margin-right: 0;
+	}
+.tutor-loop-cart-btn-wrap {
+	font-size: 15px;
+	}
+.tutor-course-listing-item-footer .list-item-button .tutor-btn.tutor-btn-ghost .btn-icon {
+	display: inline-flex;
+	}
+.tutor-course-listing-item-footer .list-item-button .tutor-btn.tutor-btn-ghost {
+	align-items: center; display: flex;
+	}
+/* pagination */
+.tutor-course-list-pagination.tutor-ui-pagination {
+    max-width: 510px;
+    }
+.tutor-ui-pagination ul.tutor-pagination-numbers .page-numbers.current {
+    width: 32px; line-height: 24px; background: none;
+    }	
+.tutor-pagination ul.tutor-pagination-numbers .page-numbers {
+    background: none;
+	}
+
+/* Single Course */
+body.single-courses .tutor-row { 
+	flex-wrap: wrap;
+	}
+.tutor-social-share-wrap {
+    margin-left: 10px;
+	}
+.instructor-bio span {
+    font-family: inherit !important;
+	}
+.single-instructor-wrap .instructor-name h4 {
+    font-size: 12px; font-weight: 400;
+	}
+.tutor-segment-title, .tutor-single-course-segment .tutor-segment-title {
+	font-weight: 700;
+	}
+button.tutor-btn.button.is-primary,
+.tutor-button.button.is-primary {
+	color: #fff;
+	}
+.tutor-course-topics-contents .tutor-course-title h4 {
+	font-weight: 700;
+	}
+.tutor-single-course-meta ul li a {
+	word-break: break-all;
+	}
+.tutor-price-preview-box del {
+	margin-left: 12px; font-size: 18px;
+	}
+.tutor-tag-list li a {
+    font-size: inherit;
+	}
+.tutor-accordion-item-body-content h5 {
+    margin: 0;
+	}
+/* fix for: mp4 lesson video seek forward issue */
+.plyr__progress input[type=range] {
+    max-width: 100%;
+	}
+
+/* Sticky Enroll Button for mobile */
+@media screen and (max-width: 991px) {
+	.tutor-single-add-to-cart-box,
+	.tutor-single-add-to-cart-box.cart-required-login {
+		position: fixed; bottom: 0; width: 100%; left: 0; z-index: 40; 
+		}
+	button.tutor-btn-enroll.tutor-btn.tutor-course-purchase-btn {
+    	border-radius: 0;
+		}
+	}
+
+/* Single Lesson */
+.tutor-single-lesson-wrap {
+    margin-top: -1px;
+	}
+.tutor-topics-in-single-lesson .tutor-topics-title h3 {
+	font-weight: 700;
+	}
+.tutor-topbar-item.tutor-topbar-content-title-wrap {
+	font-size: 17px;
+	}
+.tutor-site-wrap .input-text {
+	max-width: none;
+	}
+.tutor-single-page-top-bar a {
+	line-height: 1;
+	}
+
+/* Profile Page */
+.course-target-reviews-title {
+    padding: 12px 24px;
+    }
+.course-target-reviews-title h4 {
+    margin: 0;
+    }
+.tutor-review-individual-item .review-avatar {
+    margin-right: 12px;
+    }
+.tutor-user-public-profile .tutor-container {
+    overflow-x: hidden !important;
+	}
+
+/* Sign up */
+.tutor-login-form-wrap .input-text {
+    max-width: 100%;
+	}
+
+/* dashboard */
+.tutor-dashboard-info-table-wrap table {
+    margin-top: 0;
+	}
+
+/* Student Registration */
+.tutor-form-group.tutor-reg-form-btn-wrap button.tutor-button,
+body.tutor-lms .site-content form input[type=submit], 
+body.tutor-lms .site-content form input[type=button], 
+body.tutor-lms .site-content form button {
+    visibility: visible !important;
+    }
+.tutor-form-group input {
+    max-width: none;
+    }
+	
+	

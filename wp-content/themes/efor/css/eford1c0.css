@@ -1,0 +1,20 @@
+/* EFOR */
+@media screen and (min-width: 768px) {
+	p {
+   		margin: 0 0 1em 0;
+		}
+	}
+
+
+/* BLOG */
+.is-more-link-button-style .blog-stream .more-link {
+    border-radius: 24px; font-weight: bold;
+    }
+.is-share-links-boxed .single .share-links a:not(:hover) {
+    background: #f3f3f3;
+	}
+	
+/* Jet Elements Timeline Fix */
+html .jet-timeline--align-left .jet-timeline-item {
+    direction: ltr;
+}

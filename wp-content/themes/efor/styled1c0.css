@@ -1,0 +1,85 @@
+/*
+Theme Name:        Efor
+Text Domain:       efor
+Version:           13.1.3
+Description:       Coaching & Online Courses WordPress Theme
+Requires at least: 6.2
+Requires PHP:      7.0
+Tags:              education
+Author:            Pixelwars
+Author URI:        https://themeforest.net/user/pixelwars
+Theme URI:         https://themeforest.net/user/pixelwars/portfolio
+License:           ThemeForest License
+License URI:       https://themeforest.net/licenses
+Domain Path:       /languages
+*/
+
+
+/*
+    Do not remove any of the commented text above as it is used by the theme for proper function!
+*/
+
+
+/* Plugin: "Top 10 - Popular Posts" */
+
+.tptn_counter {
+	display: none;
+}
+
+/* Plugin: "Top 10 - Popular Posts" */
+
+
+/* Plugin: "Tutor LMS" */
+
+.tutor-course-archive-header {
+	margin-top: 70px;
+}
+
+/* Plugin: "Tutor LMS" */
+
+
+/* Plugin: "Social Feed Gallery" */
+
+.instagram-gallery__actions {
+	margin: 0px;
+}
+
+/* Plugin: "Social Feed Gallery" */
+
+
+/* Plugin: "Contact Form 7" */
+
+.wpcf7 .contact-form {
+	margin-bottom: 0px;
+}
+
+.wpcf7 .wpcf7-form-control-wrap {
+	display: block;
+}
+
+.wpcf7 span.wpcf7-not-valid-tip {
+	position: absolute;
+	left: 10px;
+	bottom: -16px;
+	font-size: 10px;
+	color: #222222;
+	background-color: #fbe7ba;
+	padding: .2em .8em;
+	margin: 0;
+	min-width: 150px;
+	z-index: 1;
+}
+
+.wpcf7 .wpcf7-spinner {
+	display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 0px;
+}
+
+/* Plugin: "Contact Form 7" */
+
