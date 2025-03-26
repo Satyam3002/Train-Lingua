@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Blog Admin Panel</h1>
+        
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <a href="index.html" class="text-blue-500 mb-4 block">← Back to Blog</a>
+            
+            <form id="blogPostForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2">Title <span class="text-red-500">*</span></label>
+                    <input type="text" id="title" required 
+                           class="w-full px-3 py-2 border rounded">
+                </div>
+                
+                <div>
+                    <label class="block mb-2">Content <span class="text-red-500">*</span></label>
+                    <textarea id="content" rows="10" required
+                              class="w-full px-3 py-2 border rounded"></textarea>
+                </div>
+                
+                <div>
+                    <label class="block mb-2">Writer Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="author" required
+                           class="w-full px-3 py-2 border rounded">
+                </div>
+                
+                <div>
+                    <label class="block mb-2">Publish Date <span class="text-red-500">*</span></label>
+                    <input type="date" id="publish_date" required
+                           class="w-full px-3 py-2 border rounded">
+                </div>
+                
+                <div>
+                    <label class="block mb-2">Featured Image <span class="text-red-500">*</span></label>
+                    <div class="flex items-center space-x-4">
+                        <input type="text" id="image" required
+                               class="flex-1 px-3 py-2 border rounded" placeholder="Image URL">
+                        <button type="button" onclick="openImageGallery()" 
+                                class="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">
+                            Choose from Gallery
+                        </button>
+                    </div>
+                    <div id="imagePreview" class="mt-2 hidden">
+                        <img src="" alt="Preview" class="max-h-40 rounded border">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block mb-2">Useful Links (Optional)</label>
+                    <div id="linksContainer" class="space-y-2">
+                        <!-- Links will be added here dynamically -->
+                    </div>
+                    <button type="button" onclick="addLinkField()" 
+                            class="mt-2 bg-gray-200 px-3 py-1 rounded text-sm hover:bg-gray-300">
+                        + Add Link
+                    </button>
+                </div>
+                
+                <button type="submit" 
+                        class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+                    Publish Blog Post
+                </button>
+            </form>
+
+            <div id="blogList" class="mt-8">
+                <h2 class="text-2xl font-bold mb-4">Existing Blog Posts</h2>
+                <div id="existingBlogPosts">
+                    <!-- Existing blog posts will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Gallery Modal -->
+    <div id="imageGalleryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-lg p-6 max-w-4xl max-h-[80vh] overflow-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Select Image</h3>
+                <button onclick="closeImageGallery()" class="text-gray-500 hover:text-gray-700">
+                    &times;
+                </button>
+            </div>
+            <div class="grid grid-cols-3 gap-4" id="galleryImages">
+                <!-- Images will be loaded here -->
+                <div class="text-center py-8">Loading images...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function initializeSupabase() {
+        const supabaseUrl = 'https://wronfefecnbowcaimxgg.supabase.co';
+        const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indyb25mZWZlY25ib3djYWlteGdnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI5ODQ2NjksImV4cCI6MjA1ODU2MDY2OX0.HTpijTTeeBfNFRvkrFPqcsLfnD-s9Ksd5lTDA0APvWs';
+        
+        if (typeof supabase === 'undefined') {
+            console.error('Supabase library not loaded');
+            return null;
+        }
+
+        try {
+            return supabase.createClient(supabaseUrl, supabaseAnonKey);
+        } catch (error) {
+            console.error('Error creating Supabase client:', error);
+            return null;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const supabase = initializeSupabase();
+        if (!supabase) {
+            alert('Failed to initialize Supabase. Check console for details.');
+            return;
+        }
+
+        // Set default publish date to today
+        document.getElementById('publish_date').valueAsDate = new Date();
+
+        // Form submission handler
+        document.getElementById('blogPostForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const author = document.getElementById('author').value;
+            const publish_date = document.getElementById('publish_date').value;
+            const image = document.getElementById('image').value;
+            
+            // Collect all links
+            const links = [];
+            document.querySelectorAll('.link-row').forEach(row => {
+                const url = row.querySelector('.link-url').value;
+                const text = row.querySelector('.link-text').value;
+                if (url) links.push({ url, text });
+            });
+
+            const { data, error } = await supabase
+                .from('blogs')
+                .insert([
+                    { 
+                        title,
+                        content, 
+                        author,
+                        publish_date,
+                        image,
+                        links: links.length > 0 ? links : null,
+                        created_at: new Date().toISOString()
+                    }
+                ]);
+
+            if (error) {
+                console.error('Error creating blog post:', error);
+                alert('Error creating blog post: ' + error.message);
+            } else {
+                alert('Blog post created successfully!');
+                e.target.reset();
+                document.getElementById('publish_date').valueAsDate = new Date();
+                document.getElementById('linksContainer').innerHTML = '';
+                fetchExistingBlogs();
+            }
+        });
+
+        // Image gallery functions
+        window.openImageGallery = async function() {
+            const modal = document.getElementById('imageGalleryModal');
+            const gallery = document.getElementById('galleryImages');
+            
+            modal.classList.remove('hidden');
+            gallery.innerHTML = '<div class="text-center py-8">Loading images...</div>';
+            
+            // In a real app, you would fetch images from your storage
+            // This is just a simulation
+            setTimeout(() => {
+                gallery.innerHTML = `
+                    <div class="cursor-pointer" onclick="selectImage('https://via.placeholder.com/600x400')">
+                        <img src="https://via.placeholder.com/600x400" class="w-full h-32 object-cover rounded">
+                        <p class="text-sm mt-1">Placeholder 1</p>
+                    </div>
+                    <div class="cursor-pointer" onclick="selectImage('https://via.placeholder.com/600x400/333/fff')">
+                        <img src="https://via.placeholder.com/600x400/333/fff" class="w-full h-32 object-cover rounded">
+                        <p class="text-sm mt-1">Placeholder 2</p>
+                    </div>
+                    <div class="cursor-pointer" onclick="selectImage('https://via.placeholder.com/600x400/555/fff')">
+                        <img src="https://via.placeholder.com/600x400/555/fff" class="w-full h-32 object-cover rounded">
+                        <p class="text-sm mt-1">Placeholder 3</p>
+                    </div>
+                `;
+            }, 500);
+        };
+
+        window.closeImageGallery = function() {
+            document.getElementById('imageGalleryModal').classList.add('hidden');
+        };
+
+        window.selectImage = function(url) {
+            document.getElementById('image').value = url;
+            const preview = document.getElementById('imagePreview');
+            preview.querySelector('img').src = url;
+            preview.classList.remove('hidden');
+            closeImageGallery();
+        };
+
+        // Link management functions
+        window.addLinkField = function() {
+            const container = document.getElementById('linksContainer');
+            const id = Date.now();
+            container.innerHTML += `
+                <div class="link-row flex space-x-2">
+                    <input type="text" class="link-text flex-1 px-2 py-1 border rounded" placeholder="Link text">
+                    <input type="url" class="link-url flex-1 px-2 py-1 border rounded" placeholder="https://example.com">
+                    <button type="button" onclick="this.parentNode.remove()" class="bg-red-100 px-2 rounded text-red-600">
+                        ×
+                    </button>
+                </div>
+            `;
+        };
+
+        // Fetch and display existing blog posts
+        async function fetchExistingBlogs() {
+            const { data, error } = await supabase
+                .from('blogs')
+                .select('*')
+                .order('publish_date', { ascending: false });
+
+            if (error) {
+                console.error('Error fetching blog posts:', error);
+                return;
+            }
+
+            const blogListContainer = document.getElementById('existingBlogPosts');
+            blogListContainer.innerHTML = '';
+
+            data.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'bg-gray-100 p-4 rounded mb-4';
+                postElement.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold">${post.title}</h3>
+                            <p class="text-sm text-gray-600">
+                                ${post.publish_date} | By ${post.author}
+                            </p>
+                            ${post.image ? `<img src="${post.image}" class="mt-2 max-h-20 rounded border">` : ''}
+                        </div>
+                        <div class="flex space-x-2">
+                            <button onclick="deleteBlogPost(${post.id})" 
+                                    class="mt-2 bg-red-500 text-white px-2 py-1 rounded text-sm">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                `;
+                blogListContainer.appendChild(postElement);
+            });
+        }
+
+        window.deleteBlogPost = async function(postId) {
+            if (!confirm('Are you sure you want to delete this post?')) return;
+            
+            const { error } = await supabase
+                .from('blogs')
+                .delete()
+                .eq('id', postId);
+
+            if (error) {
+                alert('Error deleting blog post: ' + error.message);
+            } else {
+                alert('Blog post deleted successfully!');
+                fetchExistingBlogs();
+            }
+        }
+
+        // Fetch existing blogs on page load
+        fetchExistingBlogs();
+    });
+    </script>
+</body>
+</html>
