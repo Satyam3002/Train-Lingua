@@ -934,7 +934,7 @@
             background: #f8f9fa;
             min-width: 220px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(233, 226, 226, 0.953);
             z-index: 999;
             padding: 8px 0;
             transition: all 0.3s ease;
@@ -961,14 +961,14 @@
 
         /* Add arrow for items with submenu */
         .nav-menu .menu-item-has-children>a:after {
-            content: '▾';
+            content: '';
             margin-left: 5px;
             font-size: 12px;
         }
 
         /* Arrow for nested submenus */
         .nav-menu .sub-menu .menu-item-has-children>a:after {
-            content: '▸';
+            content: '';
             float: right;
         }
 
@@ -982,7 +982,7 @@
         .nav-menu .sub-menu a {
             padding: 12px 20px;
             display: block;
-            color: #495057;
+            color: #dce4ec;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
@@ -992,7 +992,7 @@
         /* Hover effect for menu items */
         .nav-menu .sub-menu a:hover {
             background: #e9ecef;
-            color: #2b6cb0;
+            color: #dce4ec;
             transform: translateX(5px);
         }
 
@@ -1026,13 +1026,13 @@
 
         /* Optional: Add hover indication for parent items */
         .nav-menu .menu-item-has-children:hover>a {
-            color: #2b6cb0;
+            color: hwb(210 89% 6%);
         }
 
         /* Optional: Style for currently active menu items */
         .nav-menu .sub-menu .current-menu-item>a {
             background: #e9ecef;
-            color: #2b6cb0;
+            color: #dee1e4;
             font-weight: 600;
         }
 
@@ -1063,7 +1063,7 @@
             right: 20px;
             z-index: 9999;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(241, 235, 235, 0.3);
             border-radius: 50%;
         }
 
@@ -1452,7 +1452,7 @@
                                             <a href="services/index.html" onClick="return true">Start Here</a> -->
                                         <li id="menu-item-1360"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                            <a href="services/index.html" onClick="return true">Exams</a>
+                                            <a href="exams.html" onClick="return true">Exams</a>
                                             <ul class="sub-menu">
                                                 <li class="menu-item menu-item-has-children">
                                                     <a href="#french">French</a>
