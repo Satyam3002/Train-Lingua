@@ -961,14 +961,14 @@
 
         /* Add arrow for items with submenu */
         .nav-menu .menu-item-has-children>a:after {
-            content: '▾';
+            content: '';
             margin-left: 5px;
             font-size: 12px;
         }
 
         /* Arrow for nested submenus */
         .nav-menu .sub-menu .menu-item-has-children>a:after {
-            content: '▸';
+            content: '';
             float: right;
         }
 
@@ -1063,7 +1063,7 @@
             right: 20px;
             z-index: 9999;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(249, 246, 246, 0.3);
             border-radius: 50%;
         }
 
@@ -1326,51 +1326,158 @@
                                 <!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
                                     title="View your shopping cart"> </a>
                                 <!-- .shopping-cart -->
+                                <!-- .shopping-cart -->
                                 <div class="nav-menu">
-                                    <ul id="menu-mymenu" class="">
+                                    <ul id="menu-mymenu" class="" style="position: relative;">
                                         <li id="menu-item-1642"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
                                             <a href="index.html" aria-current="page" onClick="return true">Home</a>
                                         </li>
                                         <li id="menu-item-1360"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
-                                            <a href="services/index.html" onClick="return true">Start Here</a>
-                                        <li id="menu-item-1360"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                            <a href="services/index.html" onClick="return true">Start Here</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="services/index.html#french">French</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#delf">DELF</a></li>
-                                                        <li><a href="services/index.html#tef">TEF</a></li>
-                                                        <li><a href="services/index.html#tcf">TCF</a></li>
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
+                                            style="position: relative;">
+                                            <a href="exams.html" onClick="return true">Exams</a>
+                                            <ul class="sub-menu" style="
+                                              background-color: white;
+                                                position: absolute; 
+                                                min-width: 180px; 
+                                                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                display: none;
+                                                padding: 6px;
+                                                z-index: 1000;
+                                                left: 0;
+                                                top: 100%;
+                                            ">
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#french" style="
+                                                        display: block; 
+                                                      
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">French</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#delf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">DELF</a></li>
+                                                        <li><a href="services/index.html#tef" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TEF</a></li>
+                                                        <li><a href="services/index.html#tcf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TCF</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="services/index.html#spanish">Spanish</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#spanish1">Spanish Course 1</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#spanish2">Spanish Course 2</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#spanish3">Spanish Course 3</a>
-                                                        </li>
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#spanish" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">Spanish</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#spanish1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 1</a></li>
+                                                        <li><a href="services/index.html#spanish2" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 2</a></li>
+                                                        <li><a href="services/index.html#spanish3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 3</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="services/index.html#german">German</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#german1">German Course 1</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#german2">German Course 2</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#german3">German Course 3</a>
-                                                        </li>
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#german" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">German</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#german1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 1</a></li>
+                                                        <li><a href="services/index.html#german2" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 2</a></li>
+                                                        <li><a href="services/index.html#german3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 3</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
-                                        </li>
                                         </li>
                                         <li id="menu-item-1539"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
@@ -1389,7 +1496,20 @@
                                             <a href="contact/index.html" onClick="return true">Contact</a>
                                         </li>
                                     </ul>
-                                </div> <a class="search-toggle toggle-link"></a>
+                                </div>
+                                
+                                <style>
+                                    /* Hover and dropdown display styles */
+                                    #menu-item-1360:hover .sub-menu {
+                                        display: block !important;
+                                    }
+                                    #menu-item-1360 .menu-item-has-children:hover .sub-menu {
+                                        display: block !important;
+                                    }
+                                    #menu-item-1360 .menu-item-has-children:hover {
+                                        background-color: white;
+                                    }
+                                </style>  <a class="search-toggle toggle-link"></a>
                                 <div class="search-container">
                                     <div class="search-box" role="search">
                                         <form class="search-form" method="get"
@@ -1456,35 +1576,37 @@
                                                                     value="Search">
                                                             </form>
 
-                                        <!-- .search-form -->
+                                                            <!-- .search-form -->
+                                                        </div>
+
+                                                        <!-- .search-box -->
+                                                    </div>
+
+                                                    <!-- .search-container -->
+                                                    <div class="social-container widget-area"><a
+                                                            class="social-link facebook" target="_blank" href="#"></a><a
+                                                            class="social-link twitter" target="_blank" href="#"></a><a
+                                                            class="social-link instagram" target="_blank"
+                                                            href="#"></a><a class="social-link linkedin" target="_blank"
+                                                            href="#"></a>
+                                                    </div>
+
+                                                    <!-- .social-container -->
+                                                </div>
+
+                                                <!-- .layout-medium -->
+                                            </div>
+
+                                            <!-- .menu-wrap -->
+                                        </nav>
+
+                                        <!-- #site-navigation .main-navigation .site-navigation -->
                                     </div>
 
-                                    <!-- .search-box -->
+                                    <!-- .header-wrap-inner -->
                                 </div>
 
-                                <!-- .search-container -->
-                                <div class="social-container widget-area"><a class="social-link facebook"
-                                        target="_blank" href="#"></a><a class="social-link twitter" target="_blank"
-                                        href="#"></a><a class="social-link instagram" target="_blank" href="#"></a><a
-                                        class="social-link linkedin" target="_blank" href="#"></a>
-                                </div>
-
-                                <!-- .social-container -->
-                            </div>
-
-                            <!-- .layout-medium -->
-                        </div>
-
-                        <!-- .menu-wrap -->
-                    </nav>
-
-                    <!-- #site-navigation .main-navigation .site-navigation -->
-                </div>
-
-                <!-- .header-wrap-inner -->
-            </div>
-
-            <!-- .header-wrap -->
+                                <!-- .header-wrap -->
         </header>
 
         <!-- #masthead .site-header -->
@@ -1695,7 +1817,8 @@
                                                     <div class="elementor-jet-animated-box jet-elements">
                                                         <div id="jet-animated-box-fc8f4d3"
                                                             class="jet-animated-box jet-box-effect-7"
-                                                            data-settings='{&quot;widgetId&quot;:&quot;fc8f4d3&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'>
+                                                            data-settings='{&quot;widgetId&quot;:&quot;fc8f4d3&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'
+                                                            style="height: 100%; min-height: 620px;">
                                                             <div id="jet-animated-box__front-fc8f4d3"
                                                                 class="jet-animated-box__front">
                                                                 <div class="jet-animated-box__inner">
@@ -1721,7 +1844,7 @@
                                                             <div id="jet-animated-box__back-fc8f4d3"
                                                                 class="jet-animated-box__back"
                                                                 class="jet-animated-box__back"
-                                                                style="background-image: url('Untitled\ design.zip\ -\ 2.png'); background-ver; background-position: center;">
+                                                                style="background-image: url('Untitled\ design.zip\ -\ 2.png'); background-position: center;">
                                                                 <div class="jet-animated-box__inner">
                                                                     <div class="jet-animated-box__content">
                                                                         <h3
@@ -1759,7 +1882,8 @@
                                                     <div class="elementor-jet-animated-box jet-elements">
                                                         <div id="jet-animated-box-56b1cc1"
                                                             class="jet-animated-box jet-box-effect-7"
-                                                            data-settings='{&quot;widgetId&quot;:&quot;56b1cc1&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'>
+                                                            data-settings='{&quot;widgetId&quot;:&quot;56b1cc1&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'
+                                                            style="height: 100%; min-height: 620px;">
                                                             <div id="jet-animated-box__front-56b1cc1"
                                                                 class="jet-animated-box__front">
                                                                 <div class="jet-animated-box__inner">
@@ -1824,7 +1948,8 @@
                                                     <div class="elementor-jet-animated-box jet-elements">
                                                         <div id="jet-animated-box-dc3f5be"
                                                             class="jet-animated-box jet-box-effect-7"
-                                                            data-settings='{&quot;widgetId&quot;:&quot;dc3f5be&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'>
+                                                            data-settings='{&quot;widgetId&quot;:&quot;dc3f5be&quot;,&quot;switchEventType&quot;:&quot;hover&quot;,&quot;paperFoldDirection&quot;:&quot;left&quot;,&quot;slideOutDirection&quot;:&quot;left&quot;,&quot;peelCornerPosition&quot;:&quot;right&quot;}'
+                                                            style="height: 100%; min-height: 620px;">
                                                             <div id="jet-animated-box__front-dc3f5be"
                                                                 class="jet-animated-box__front">
                                                                 <div class="jet-animated-box__inner">
