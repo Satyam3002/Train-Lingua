@@ -961,9 +961,9 @@
 
         /* Add arrow for items with submenu */
         .nav-menu .menu-item-has-children>a:after {
-            content: '▾';
-            margin-left: 5px;
-            font-size: 12px;
+            content: '';
+            margin-left: 0px;
+            font-size: 0px;
         }
 
         /* Arrow for nested submenus */
@@ -1326,51 +1326,158 @@
                                 <!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
                                     title="View your shopping cart"> </a>
                                 <!-- .shopping-cart -->
+                                <!-- .shopping-cart -->
                                 <div class="nav-menu">
-                                    <ul id="menu-mymenu" class="">
+                                    <ul id="menu-mymenu" class="" style="position: relative;">
                                         <li id="menu-item-1642"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
                                             <a href="index.html" aria-current="page" onClick="return true">Home</a>
                                         </li>
-                                        <!-- <li id="menu-item-1360"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
-                                            <a href="services/index.html" onClick="return true">Start Here</a> -->
                                         <li id="menu-item-1360"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
+                                            style="position: relative;">
                                             <a href="exams.html" onClick="return true">Exams</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="exams.html#french">French</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#delf">DELF</a></li>
-                                                        <li><a href="services/index.html#tef">TEF</a></li>
-                                                        <li><a href="services/index.html#tcf">TCF</a></li>
+                                            <ul class="sub-menu" style="
+                                              background-color: white;
+                                                position: absolute; 
+                                                min-width: 180px; 
+                                                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                display: none;
+                                                padding: 6px;
+                                                z-index: 1000;
+                                                left: 0;
+                                                top: 100%;
+                                            ">
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#french" style="
+                                                        display: block; 
+                                                      
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">French</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#delf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">DELF</a></li>
+                                                        <li><a href="services/index.html#tef" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TEF</a></li>
+                                                        <li><a href="services/index.html#tcf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TCF</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="exams.html#spanish">Spanish</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#spanish1">Spanish Course 1</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#spanish2">Spanish Course 2</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#spanish3">Spanish Course 3</a>
-                                                        </li>
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#spanish" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">Spanish</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#spanish1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 1</a></li>
+                                                        <li><a href="services/index.html#spanish2" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 2</a></li>
+                                                        <li><a href="services/index.html#spanish3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 3</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item menu-item-has-children">
-                                                    <a href="exams.html#german">German</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="services/index.html#german1">German Course 1</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#german2">German Course 2</a>
-                                                        </li>
-                                                        <li><a href="services/index.html#german3">German Course 3</a>
-                                                        </li>
+                                                <li class="menu-item menu-item-has-children" 
+                                                    style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+                                                    <a href="exams.html#german" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">German</a>
+                                                    <ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+                                                        <li><a href="services/index.html#german1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 1</a></li>
+                                                        <li><a href="services/index.html#german2" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 2</a></li>
+                                                        <li><a href="services/index.html#german3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 3</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
-                                        </li>
                                         </li>
                                         <li id="menu-item-1539"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
@@ -1389,7 +1496,20 @@
                                             <a href="contact/index.html" onClick="return true">Contact</a>
                                         </li>
                                     </ul>
-                                </div> <a class="search-toggle toggle-link"></a>
+                                </div>
+                                
+                                <style>
+                                    /* Hover and dropdown display styles */
+                                    #menu-item-1360:hover .sub-menu {
+                                        display: block !important;
+                                    }
+                                    #menu-item-1360 .menu-item-has-children:hover .sub-menu {
+                                        display: block !important;
+                                    }
+                                    #menu-item-1360 .menu-item-has-children:hover {
+                                        background-color: white;
+                                    }
+                                </style>  <a class="search-toggle toggle-link"></a>
                                 <div class="search-container">
                                     <div class="search-box" role="search">
                                         <form class="search-form" method="get"
