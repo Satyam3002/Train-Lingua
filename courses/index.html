@@ -373,6 +373,307 @@
 			gap: 1.25em;
 		}
 
+		.site .footer-subscribe {
+			background: #ffffff;
+		}
+
+		.top-bar,
+		.top-bar select option {
+			background-color: #171717;
+		}
+
+		.header-wrap:after {
+			color: #222222;
+		}
+
+		.is-menu-bar .menu-wrap:after {
+			color: #222222;
+		}
+
+		/* Make the container flex to equalize column heights */
+		.elementor-container {
+			display: flex;
+			align-items: stretch;
+		}
+
+		/* Ensure columns are equal width */
+		.elementor-col-33 {
+			flex: 1 1 33.33%;
+			max-width: 33.33%;
+		}
+
+		/* Set animated boxes to fill their containers */
+		.jet-animated-box {
+			height: 100%;
+			width: 100%;
+		}
+
+		/* Ensure front and back sides fill the animated box */
+		.jet-animated-box__front,
+		.jet-animated-box__back {
+			height: 100%;
+			width: 100%;
+		}
+
+		.elementor-container {
+			display: flex;
+			align-items: stretch;
+			/* Ensures columns stretch to the tallest height */
+		}
+
+		.elementor-col-33 {
+			flex: 1 1 33.33%;
+			/* Forces equal width */
+			max-width: 33.33%;
+			/* Prevents overflow */
+		}
+
+		.jet-animated-box {
+			height: 100%;
+			/* Fills the column height */
+			width: 100%;
+			/* Ensures full column width */
+		}
+
+		.jet-animated-box__front,
+		.jet-animated-box__back {
+			height: 100%;
+			/* Both sides match the container height */
+			width: 100%;
+			/* Ensures full width */
+		}
+
+		.jet-animated-box__back {
+			background-size: cover;
+			/* Scales image to cover the area */
+			background-position: center;
+			/* Centers the image */
+		}
+
+		/* Ensure columns are equal in height and width */
+		.elementor-container {
+			display: flex;
+			align-items: stretch;
+		}
+
+		.elementor-col-33 {
+			flex: 1 1 33.33%;
+			max-width: 33.33%;
+		}
+
+		/* Standardize animated box dimensions */
+		.jet-animated-box {
+			height: 100%;
+			width: 100%;
+		}
+
+		.jet-animated-box__front,
+		.jet-animated-box__back {
+			height: 100%;
+			width: 100%;
+		}
+
+		/* Style inner content */
+		.jet-animated-box__inner {
+			padding: 20px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.jet-animated-box {
+			height: 100%;
+			min-height: 400px;
+			width: 100%;
+		}
+
+		/* Main dropdown styling */
+		.nav-menu .sub-menu {
+			display: none;
+			position: absolute;
+			background: #f8f9fa;
+			min-width: 220px;
+			border-radius: 8px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			z-index: 999;
+			padding: 8px 0;
+			transition: all 0.3s ease;
+			border: 1px solid #e9ecef;
+		}
+
+		/* Show dropdown on hover */
+		.nav-menu li:hover>.sub-menu {
+			display: block;
+			animation: fadeIn 0.3s ease;
+		}
+
+		/* Nested dropdown positioning */
+		.nav-menu .sub-menu .sub-menu {
+			left: 100%;
+			top: -8px;
+			/* Aligns with parent menu */
+		}
+
+		/* Menu item with children */
+		.nav-menu .menu-item-has-children {
+			position: relative;
+		}
+
+		/* Add arrow for items with submenu */
+		.nav-menu .menu-item-has-children>a:after {
+			content: '';
+			margin-left: 5px;
+			font-size: 12px;
+			content: '';
+			margin-left: 0px;
+			font-size: 0px;
+		}
+
+		/* Arrow for nested submenus */
+		.nav-menu .sub-menu .menu-item-has-children>a:after {
+			content: '';
+			float: right;
+		}
+
+		/* Individual menu items */
+		.nav-menu .sub-menu li {
+			display: block;
+			width: 100%;
+		}
+
+		/* Menu links styling */
+		.nav-menu .sub-menu a {
+			padding: 12px 20px;
+			display: block;
+			color: #495057;
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 500;
+			transition: all 0.2s ease;
+		}
+
+		/* Hover effect for menu items */
+		.nav-menu .sub-menu a:hover {
+			background: #e9ecef;
+			color: #2b6cb0;
+			transform: translateX(5px);
+		}
+
+		/* First level dropdown specific styling */
+		.nav-menu>li>.sub-menu {
+			margin-top: 10px;
+		}
+
+		/* Second level dropdown specific styling */
+		.nav-menu .sub-menu .sub-menu {
+			background: #ffffff;
+		}
+
+		/* Animation for dropdown */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Add divider between menu items */
+		.nav-menu .sub-menu li:not(:last-child) {
+			border-bottom: 1px solid #edf2f7;
+		}
+
+		/* Optional: Add hover indication for parent items */
+		.nav-menu .menu-item-has-children:hover>a {
+			color: #2b6cb0;
+		}
+
+		/* Optional: Style for currently active menu items */
+		.nav-menu .sub-menu .current-menu-item>a {
+			background: #e9ecef;
+			color: #2b6cb0;
+			font-weight: 600;
+		}
+
+		/* Ensure background images behave consistently */
+		.jet-animated-box__back {
+			background-size: cover;
+			background-position: center;
+		}
+
+		.jet-animated-box__inner {
+			padding: 20px;
+			/* Adds breathing room around content */
+			height: 100%;
+			/* Ensures inner div fills the box */
+			display: flex;
+			/* Enables vertical centering */
+			flex-direction: column;
+			/* Stacks content vertically */
+			justify-content: center;
+			/* Centers content vertically */
+			align-items: center;
+			/* Centers content horizontally */
+		}
+
+		.whatsapp-float {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 9999;
+			cursor: pointer;
+			box-shadow: 0 0 10px rgba(249, 246, 246, 0.3);
+			border-radius: 50%;
+		}
+
+		.whatsapp-float img {
+			width: 60px;
+			height: 60px;
+		}
+
+
+		@media screen and (max-width: 768px) {
+			.site-branding-wrap {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				position: relative;
+			}
+
+			.site-title-text {
+				display: flex;
+				align-items: center;
+			}
+
+			.social-container {
+				position: absolute;
+				right: -220px;
+				top: 50%;
+				transform: translateY(-50%);
+				display: flex;
+				align-items: center;
+			}
+
+			.social-container a {
+				margin-left: 10px;
+				/* Spacing between social icons */
+				display: inline-block;
+				width: 24px;
+				/* Adjust icon size as needed */
+				height: 24px;
+				/* Adjust icon size as needed */
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+
+
 		:where(.wp-block-post-template.is-layout-grid) {
 			gap: 1.25em;
 		}
@@ -937,96 +1238,329 @@
 					<div class="site-branding">
 						<div class="site-branding-wrap">
 							<div class="site-branding-left">
-							</div> <!-- .site-branding-left -->
+							</div>
 
-							<!-- Rishabh -->
+							<!-- .site-branding-left -->
+							<div class="site-title-text">
+								<h1 class="site-title"> <a href="index.html" rel="home"> <span
+											class="screen-reader-text">
+											Train Lingua </span>
+										<h1 class="site-title"> <a href="index.html" rel="home"> <img
+													src="../../../logo.png" alt="Train Lingua Logo" class="site-logo" />
+											</a> </h1>
+										<!-- .site-title -->
 
-							<div class="site-branding-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px 15px; box-sizing: border-box; max-width: 100%; overflow: hidden;">
-								<a href="../index.html" rel="home" class="site-title" style="display: block; overflow: hidden; text-decoration: none;">
-								  <img src="../logo.png" alt="Train Lingua Logo" class="site-logo" style="max-width: 150px; width: 100%; height: auto; object-fit: contain; display: block;" />
-								  <span class="screen-reader-text">Judy West</span>
-								</a>
-								<p class="site-description" style="font-size: 14px; color: #666; margin-top: 5px;">Life Coach</p>
-							  </div>
-							  
+							</div>
+							<!-- .search-container -->
+							<div class="social-container widget-area"><a class="social-link facebook" target="_blank"
+									href="https://www.facebook.com/share/1HCxNRZxbh/"></a><a class="social-link twitter"
+									target="_blank" href="#"></a><a class="social-link instagram" target="_blank"
+									href="https://www.instagram.com/train_lingua?igsh=dmxwYnc4cWhiMDNy"></a><a
+									class="social-link linkedin" target="_blank"
+									href="https://www.linkedin.com/company/train-lingua/"></a>
+							</div>
 
-							<!-- /Rishabh   -->
+							<!-- .social-container -->
 
+							<!-- .site-branding-center -->
+							<!-- .site-branding-center -->
 							<div class="site-branding-right">
-							</div> <!-- .site-branding-right -->
-						</div> <!-- .site-branding-wrap -->
-					</div> <!-- .site-branding -->
+							</div>
 
+							<!-- .site-branding-right -->
+						</div>
+
+						<!-- .site-branding-wrap -->
+					</div>
+
+					<!-- .site-branding -->
 					<nav id="site-navigation" class="main-navigation site-navigation" role="navigation">
 						<div class="menu-wrap">
-							<div class="layout-medium">
-								<a class="menu-toggle">
-									<span class="lines"></span>
-								</a> <!-- .menu-toggle -->
-
-								<a class="shopping-cart" href="../cart/index.html" title="View your shopping cart">
-								</a> <!-- .shopping-cart -->
-
+							<div class="layout-medium"><a class="menu-toggle"> <span class="lines"></span> </a>
+								<!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
+									title="View your shopping cart"> </a>
+								<!-- .shopping-cart -->
+								<!-- .shopping-cart -->
 								<div class="nav-menu">
-									<ul id="menu-mymenu" class="">
+									<ul id="menu-mymenu" class="" style="position: relative;">
 										<li id="menu-item-1642"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1642">
-											<a href="../index.html" onClick="return true">Home</a>
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
+											<a href="../../../index.html" aria-current="page"
+												onClick="return true">Home</a>
 										</li>
 										<li id="menu-item-1360"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
-											<a href="../services/index.html" onClick="return true">Start Here</a>
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"
+											style="position: relative;">
+											<a href="../../../exams.html" onClick="return true">Exams</a>
+											<ul class="sub-menu" style="
+                                              background-color: white;
+                                                position: absolute; 
+                                                min-width: 180px; 
+                                                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                display: none;
+                                                padding: 6px;
+                                                z-index: 1000;
+                                                left: 0;
+                                                top: 100%;
+                                            ">
+												<li class="menu-item menu-item-has-children" style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+													<a href="../../../exams.html#french" style="
+                                                        display: block; 
+                                                      
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">French</a>
+													<ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+														<li><a href="services/index.html#delf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">DELF</a></li>
+														<li><a href="services/index.html#tef" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TEF</a></li>
+														<li><a href="services/index.html#tcf" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">TCF</a></li>
+													</ul>
+												</li>
+												<li class="menu-item menu-item-has-children" style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+													<a href="../../../exams.html#spanish" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">Spanish</a>
+													<ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+														<li><a href="services/index.html#spanish1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 1</a></li>
+														<li><a href="services/index.html" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 2</a></li>
+														<li><a href="services/index.html#spanish3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">Spanish Course 3</a></li>
+													</ul>
+												</li>
+												<li class="menu-item menu-item-has-children" style="
+                                                        position: relative; 
+                                                        background-color: white;
+                                                        margin: 5px;
+                                                        border-radius: 5px;
+                                                    ">
+													<a href="exams.html#german" style="
+                                                        display: block; 
+                                                       
+                                                        color: black;
+                                                        text-decoration: none;
+                                                    ">German</a>
+													<ul class="sub-menu" style="
+                                                        background-color: white; 
+                                                        position: absolute; 
+                                                        left: 100%; 
+                                                        top: 0; 
+                                                        min-width: 200px; 
+                                                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                                                        display: none;
+                                                        z-index: 1000;
+                                                    ">
+														<li><a href="services/index.html#german1" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 1</a></li>
+														<li><a href="services/index.html#german2" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 2</a></li>
+														<li><a href="services/index.html#german3" style="
+                                                            display: block; 
+                                                            padding: 10px; 
+                                                            color: black;
+                                                            text-decoration: none;
+                                                        ">German Course 3</a></li>
+													</ul>
+												</li>
+											</ul>
 										</li>
 										<li id="menu-item-1539"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
-											<a href="index.html" onClick="return true">Courses</a>
+											<a href="../../../courses/index.html" onClick="return true">Courses</a>
 										</li>
 										<li id="menu-item-1358"
-											class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1358">
-											<a href="../blog/index.html" onClick="return true">Blog</a>
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358">
+											<a href="../../../blog/index.html" onClick="return true">Blog</a>
 										</li>
 										<li id="menu-item-1828"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
-											<a href="../shop/index.html" onClick="return true">Shop</a>
+											<a href="../../../shop/index.html" onClick="return true">About Us</a>
 										</li>
 										<li id="menu-item-1359"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359">
-											<a href="../contact/index.html" onClick="return true">Contact</a>
+											<a href="../../../contact/index.html" onClick="return true">Contact</a>
 										</li>
 									</ul>
 								</div>
-								<a class="search-toggle toggle-link"></a>
 
+								<style>
+									/* Hover and dropdown display styles */
+									#menu-item-1360:hover .sub-menu {
+										display: block !important;
+									}
+
+									#menu-item-1360 .menu-item-has-children:hover .sub-menu {
+										display: block !important;
+									}
+
+									#menu-item-1360 .menu-item-has-children:hover {
+										background-color: white;
+									}
+								</style> <a class="search-toggle toggle-link"></a>
 								<div class="search-container">
 									<div class="search-box" role="search">
 										<form class="search-form" method="get"
 											action="https://themes.pixelwars.org/efor/demo-06/">
-											<label>
-												<span>
+											<label><span>
 													Search for </span>
 												<input type="search" id="search-field" name="s"
 													placeholder="type and hit enter">
 											</label>
 											<input type="submit" class="search-submit" value="Search">
-										</form> <!-- .search-form -->
-									</div> <!-- .search-box -->
-								</div> <!-- .search-container -->
+										</form>
+										<!-- .site-branding -->
+										<nav id="site-navigation" class="main-navigation site-navigation"
+											role="navigation">
+											<div class="menu-wrap">
+												<div class="layout-medium"><a class="menu-toggle"> <span
+															class="lines"></span> </a>
+													<!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
+														title="View your shopping cart"> </a>
+													<!-- .shopping-cart -->
+													<div class="nav-menu">
+														<ul id="menu-mymenu" class="">
+															<li id="menu-item-1642"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
+																<a href="index.html" aria-current="page"
+																	onClick="return true">Home</a>
+															</li>
+															<li id="menu-item-1360"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
+																<a href="services/index.html"
+																	onClick="return true">Start Here</a>
+															</li>
+															<li id="menu-item-1539"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
+																<a href="courses/index.html"
+																	onClick="return true">Courses</a>
+															</li>
+															<li id="menu-item-1358"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358">
+																<a href="blog/index.html" onClick="return true">Blog</a>
+															</li>
+															<li id="menu-item-1828"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
+																<a href="shop/index.html" onClick="return true">About
+																	Us</a>
+															</li>
+															<li id="menu-item-1359"
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359">
+																<a href="contact/index.html"
+																	onClick="return true">Contact</a>
+															</li>
+														</ul>
+													</div> <a class="search-toggle toggle-link"></a>
+													<div class="search-container">
+														<div class="search-box" role="search">
+															<form class="search-form" method="get"
+																action="https://themes.pixelwars.org/efor/demo-06/">
+																<label><span>
+																		Search for </span>
+																	<input type="search" id="search-field" name="s"
+																		placeholder="type and hit enter">
+																</label>
+																<input type="submit" class="search-submit"
+																	value="Search">
+															</form>
 
-								<!-- .search-container -->
-								<div class="social-container widget-area"><a class="social-link facebook" target="_blank"
-                                    href="https://www.facebook.com/share/1HCxNRZxbh/"></a><a class="social-link twitter"
-                                    target="_blank" href="#"></a><a class="social-link instagram" target="_blank"
-                                    href="https://www.instagram.com/train_lingua?igsh=dmxwYnc4cWhiMDNy"></a><a
-                                    class="social-link linkedin" target="_blank"
-                                    href="https://www.linkedin.com/company/train-lingua/"></a>
-                            </div>
+															<!-- .search-form -->
+														</div>
 
-                            <!-- .social-container -->
-							</div> <!-- .layout-medium -->
-						</div> <!-- .menu-wrap -->
-					</nav> <!-- #site-navigation .main-navigation .site-navigation -->
-				</div> <!-- .header-wrap-inner -->
-			</div> <!-- .header-wrap -->
+														<!-- .search-box -->
+													</div>
+
+													<!-- .search-container -->
+													<!-- <div class="social-container widget-area"><a
+                                                            class="social-link facebook" target="_blank" href="#"></a><a
+                                                            class="social-link twitter" target="_blank" href="#"></a><a
+                                                            class="social-link instagram" target="_blank"
+                                                            href="#"></a><a class="social-link linkedin" target="_blank"
+                                                            href="#"></a>
+                                                    </div> -->
+
+													<!-- .social-container -->
+												</div>
+
+												<!-- .layout-medium -->
+											</div>
+
+											<!-- .menu-wrap -->
+										</nav>
+
+										<!-- #site-navigation .main-navigation .site-navigation -->
+									</div>
+
+									<!-- .header-wrap-inner -->
+								</div>
+
+								<!-- .header-wrap -->
 		</header> <!-- #masthead .site-header -->
 		<div class="post-header post-header-classic tutor-course-archive-header">
 			<header class="entry-header">
