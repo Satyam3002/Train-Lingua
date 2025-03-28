@@ -527,6 +527,35 @@
 		  .contact-info a:hover {
 			color: #ddd;
 		  }
+
+
+
+		  <!-- logo -->
+		  .site-branding-center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			text-align: center;
+			overflow: hidden;
+		  }
+		  
+		  .site-logo {
+			max-width: 150px;
+			height: auto;
+			display: block;
+		  }
+		  
+		  .site-title {
+			text-decoration: none;
+		  }
+		  
+		  .site-description {
+			font-size: 14px;
+			color: #777;
+		  }
+		  
 		  
 
 
@@ -570,6 +599,10 @@
 
 		< !-- /Rishabh -->
 	</style>
+
+
+	
+
 	<link rel='stylesheet' id='contact-form-7-css'
 		href='../wp-content/plugins/contact-form-7/includes/css/stylesdc24.css?ver=6.0.4' type='text/css' media='all' />
 	<link rel='stylesheet' id='dot-irecommendthis-css'
@@ -1168,19 +1201,15 @@
 							<div class="site-branding-left">
 							</div> <!-- .site-branding-left -->
 
-							<div class="site-branding-center">
-								<h1 class="site-title">
-									<a href="../index.html" rel="home">
-										<span class="screen-reader-text">
-											Judy West </span>
-										<span class="site-title-text">
-											Judy West </span>
-									</a>
-								</h1> <!-- .site-title -->
-
-								<p class="site-description">
-									Life Coach </p> <!-- .site-description -->
-							</div> <!-- .site-branding-center -->
+							<div class="site-branding-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px 15px; box-sizing: border-box; max-width: 100%; overflow: hidden;">
+								<a href="../index.html" rel="home" class="site-title" style="display: block; overflow: hidden; text-decoration: none;">
+								  <img src="../logo.png" alt="Train Lingua Logo" class="site-logo" style="max-width: 150px; width: 100%; height: auto; object-fit: contain; display: block;" />
+								  <span class="screen-reader-text">Judy West</span>
+								</a>
+								<p class="site-description" style="font-size: 14px; color: #666; margin-top: 5px;">Life Coach</p>
+							  </div>
+							  
+							  
 
 							<div class="site-branding-right">
 							</div> <!-- .site-branding-right -->
@@ -1217,7 +1246,7 @@
 										</li>
 										<li id="menu-item-1828"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
-											<a href="../shop/index.html" onClick="return true">Shop</a>
+											<a href="../shop/index.html" onClick="return true">About Us</a>
 										</li>
 										<li id="menu-item-1359"
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-959 current_page_item menu-item-1359">
@@ -1243,10 +1272,10 @@
 								</div> <!-- .search-container -->
 
 								<div class="social-container widget-area">
-									<a class="social-link facebook" target="_blank" href="#"></a>
+									<a class="social-link facebook" target="_blank" href="https://www.facebook.com/share/1HCxNRZxbh/"></a>
 									<a class="social-link twitter" target="_blank" href="#"></a>
-									<a class="social-link instagram" target="_blank" href="#"></a>
-									<a class="social-link linkedin" target="_blank" href="#"></a>
+									<a class="social-link instagram" target="_blank" href="https://www.instagram.com/train_lingua?igsh=dmxwYnc4cWhiMDNy"></a>
+									<a class="social-link linkedin" target="_blank" href="https://www.linkedin.com/company/train-lingua/"></a>
 								</div> <!-- .social-container -->
 							</div> <!-- .layout-medium -->
 						</div> <!-- .menu-wrap -->
