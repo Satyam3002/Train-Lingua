@@ -527,6 +527,35 @@
 		  .contact-info a:hover {
 			color: #ddd;
 		  }
+
+
+
+		  <!-- logo -->
+		  .site-branding-center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			text-align: center;
+			overflow: hidden;
+		  }
+		  
+		  .site-logo {
+			max-width: 150px;
+			height: auto;
+			display: block;
+		  }
+		  
+		  .site-title {
+			text-decoration: none;
+		  }
+		  
+		  .site-description {
+			font-size: 14px;
+			color: #777;
+		  }
+		  
 		  
 
 
@@ -1169,18 +1198,13 @@
 							</div> <!-- .site-branding-left -->
 
 							<div class="site-branding-center">
-								<h1 class="site-title">
-									<a href="../index.html" rel="home">
-										<span class="screen-reader-text">
-											Judy West </span>
-										<span class="site-title-text">
-											Judy West </span>
-									</a>
-								</h1> <!-- .site-title -->
-
-								<p class="site-description">
-									Life Coach </p> <!-- .site-description -->
-							</div> <!-- .site-branding-center -->
+								<a href="../index.html" rel="home" class="site-title">
+								  <img src="../logo.png" alt="Train Lingua Logo" class="site-logo" />
+								  <span class="screen-reader-text">Judy West</span>
+								</a>
+								<p class="site-description">Life Coach</p>
+							  </div>
+							  
 
 							<div class="site-branding-right">
 							</div> <!-- .site-branding-right -->
@@ -1217,7 +1241,7 @@
 										</li>
 										<li id="menu-item-1828"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
-											<a href="../shop/index.html" onClick="return true">Shop</a>
+											<a href="../shop/index.html" onClick="return true">About Us</a>
 										</li>
 										<li id="menu-item-1359"
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-959 current_page_item menu-item-1359">
