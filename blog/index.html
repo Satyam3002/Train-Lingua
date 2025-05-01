@@ -118,7 +118,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>Blog &#8211; Judy West</title>
+    <title>Blog &#8211; trainLingua</title>
     <meta name='robots' content='max-image-preview:large' />
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -902,8 +902,8 @@
 
             html.loaded .nav-menu ul li a .link-text:before,
             .nav-menu li.has-submenu:hover>a .link-text:before {
-                background-color: #0f0f0f;
-                border-color: #0f0f0f;
+                background-color: #e65151 !important;
+                border-color: #0f0f0f !important;
             }
         }
 
@@ -1025,6 +1025,68 @@
     z-index: 1050; /* Higher than navbar's z-index */
 }
     </style>
+
+
+
+
+    <!-- logo responsive for mobile and tab view -->
+	<style>
+		@media (max-width: 768px) {
+			.site-logo {
+				max-height: 100px !important;
+				width: auto !important;
+				margin-bottom: 20px;
+				/* This adds spacing below the logo */
+			}
+
+			.site-title-text {
+				overflow: hidden;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				height: 60px !important;
+				width: auto !important;
+				margin-bottom: 30px !important;
+				max-width: 100% !important;
+				object-fit: contain !important;
+				display: block !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				height: 60px !important;
+				width: auto !important;
+				margin-bottom: 30px !important;
+				max-width: 100% !important;
+				object-fit: contain !important;
+				display: block !important;
+
+				/* Position tweak */
+				transform: translate(-12px, -14px);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-branding-center {
+				overflow: visible !important;
+			}
+		}
+
+		@media (min-width: 1024px) {
+
+			/* Adjust based on the laptop screen size */
+			.site-logo {
+				transform: translate(-10px, 10px);
+				/* Shift logo down slightly */
+			}
+		}
+	</style>
+
+
+
     <link rel="icon"
         href="../wp-content/uploads/sites/9/2020/06/cropped-Canva-Happy-Mature-Woman-Wearing-Eyeglasses-1920-32x32.jpg"
         sizes="32x32" />
@@ -1048,19 +1110,17 @@
                             <div class="site-branding-left">
                             </div> <!-- .site-branding-left -->
 
-                            <div class="site-branding-center">
-                                <h1 class="site-title">
-                                    <a href="../index.html" rel="home">
-                                        <span class="screen-reader-text">
-                                            Judy West </span>
-                                        <span class="site-title-text">
-                                            Judy West </span>
-                                    </a>
-                                </h1> <!-- .site-title -->
-
-                                <p class="site-description">
-                                    Life Coach </p> <!-- .site-description -->
-                            </div> <!-- .site-branding-center -->
+                           <div class="site-branding-center"
+								style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px 15px; box-sizing: border-box; max-width: 100%; overflow: visible;">
+								<a href="../index.html" rel="home" class="site-title"
+									style="display: block; overflow: visible; text-decoration: none;">
+									<img src="../logo.png" alt="Train Lingua Logo" class="site-logo"
+										style="max-width: 150px; width: 100%; height: auto; object-fit: contain; display: block; position: relative;" />
+									<span class="screen-reader-text">Judy West</span>
+								</a>
+								<p class="site-description" style="font-size: 14px; color: #666; margin-top: 5px;">Life
+									Coach</p>
+							</div>
 
                             <div class="site-branding-right">
                             </div> <!-- .site-branding-right -->
