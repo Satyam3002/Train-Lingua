@@ -792,7 +792,7 @@
 
             html.loaded .nav-menu ul li a .link-text:before,
             .nav-menu li.has-submenu:hover>a .link-text:before {
-                background-color: #e65151;
+                background-color: #e65151 !important;
                 border-color: #0f0f0f;
             }
         }
@@ -1071,6 +1071,33 @@
             width: 60px;
             height: 60px;
         }
+
+        < !-- logo -->.site-branding-center {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			text-align: center;
+			overflow: hidden;
+		}
+
+		.site-logo {
+			max-width: 150px;
+			height: auto;
+			display: block;
+		}
+
+		.site-title {
+			text-decoration: none;
+		}
+
+		.site-description {
+			font-size: 14px;
+			color: #777;
+		}
+        /* logo end */
+
     </style>
     <link rel='stylesheet' id='jet-popup-frontend-css'
         href='wp-content/plugins/jet-popup/assets/css/jet-popup-frontend3c89.css?ver=2.0.11' type='text/css'
@@ -1274,6 +1301,169 @@
             font-display: fallback;
             src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
         }
+
+       
+
+
+        /* Main dropdown styling */
+        .nav-menu .sub-menu {
+            display: none;
+            position: absolute;
+            background: #f8f9fa;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Show dropdown on hover */
+        .nav-menu li:hover>.sub-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Nested dropdown positioning */
+        .nav-menu .sub-menu .sub-menu {
+            left: 100%;
+            top: -8px;
+            /* Aligns with parent menu */
+        }
+
+        /* Menu item with children */
+        .nav-menu .menu-item-has-children {
+            position: relative;
+        }
+
+        /* Add arrow for items with submenu */
+        .nav-menu .menu-item-has-children>a:after {
+            content: '';
+            margin-left: 5px;
+            font-size: 12px;
+            content: '';
+            margin-left: 0px;
+            font-size: 0px;
+        }
+
+        /* Arrow for nested submenus */
+        .nav-menu .sub-menu .menu-item-has-children>a:after {
+            content: '';
+            float: right;
+        }
+
+        /* Individual menu items */
+        .nav-menu .sub-menu li {
+            display: block;
+            width: 100%;
+        }
+
+        /* Menu links styling */
+        .nav-menu .sub-menu a {
+            padding: 12px 20px;
+            display: block;
+            color: #495057;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect for menu items */
+        .nav-menu .sub-menu a:hover {
+            background: #e9ecef;
+            color: #2b6cb0;
+            transform: translateX(5px);
+        }
+
+        /* First level dropdown specific styling */
+        .nav-menu>li>.sub-menu {
+            margin-top: 10px;
+        }
+
+        /* Second level dropdown specific styling */
+        .nav-menu .sub-menu .sub-menu {
+            background: #ffffff;
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add divider between menu items */
+        .nav-menu .sub-menu li:not(:last-child) {
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* Optional: Add hover indication for parent items */
+        .nav-menu .menu-item-has-children:hover>a {
+            color: #2b6cb0;
+        }
+
+        /* Optional: Style for currently active menu items */
+        .nav-menu .sub-menu .current-menu-item>a {
+            background: #e9ecef;
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+
+        /* Ensure background images behave consistently */
+        .jet-animated-box__back {
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* main drop down end*/
+
+        < !-- footer -->
+		.site-footer {
+			margin-top: 100px;
+			/* space above footer */
+			font-family: 'Segoe UI', sans-serif;
+			color: #444;
+		}
+
+		.footer-line {
+			width: 100%;
+			/* full viewport width */
+			margin: 0;
+			border: none;
+			border-top: 2px solid #ccc;
+		}
+
+		.footer-container {
+			text-align: center;
+			padding: 20px 0;
+		}
+
+		.footer-container p {
+			margin: 6px;
+			font-size: 1rem;
+			color: #555;
+			letter-spacing: 0.5px;
+		}
+
+		.brand-name {
+			font-weight: bold;
+			color: #457b9d;
+			transition: color 0.3s ease;
+		}
+
+		.brand-name:hover {
+			color: #1d3557;
+		}
+
+        
     </style>
     <link rel="icon"
         href="wp-content/uploads/sites/9/2020/06/cropped-Canva-Happy-Mature-Woman-Wearing-Eyeglasses-1920-32x32.jpg"
@@ -1400,6 +1590,180 @@
     </style>
 
 
+
+    
+
+    <!--Exam menu responsive for mobile and tab view -->
+    <style>
+        /* Base styles */
+        .menu-item>a {
+            padding: 10px;
+            display: block;
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+
+        /* Mobile menu styles */
+        @media (max-width: 1024px) {
+            @media (max-width: 1024px) {
+                .menu-item {
+                    position: static !important;
+                }
+
+                .menu-item .sub-menu {
+                    position: static !important;
+                    box-shadow: none !important;
+                    padding-left: 15px;
+                }
+
+                .menu-item>a.toggle-submenu::after {
+                    content: '▸';
+                    float: right;
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+
+                .menu-item.open>a.toggle-submenu::after {
+                    content: '▾';
+                }
+
+                .sub-menu li {
+                    margin: 5px 0;
+                }
+            }
+        }
+    </style>
+
+    <style>
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 9999;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        #mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+    <!-- end exams menu responsive for mobile and tab view -->
+
+
+    <!--Exam menu responsive for mobile and tab view -->
+    <style>
+        /* Base styles */
+        .menu-item > a {
+          padding: 10px;
+          display: block;
+          color: black;
+          text-decoration: none;
+          position: relative;
+        }
+        
+        /* Mobile menu styles */
+        @media (max-width: 1024px) {
+            @media (max-width: 1024px) {
+                .menu-item {
+                  position: static !important;
+                }
+              
+                .menu-item .sub-menu {
+                  position: static !important;
+                  box-shadow: none !important;
+                  padding-left: 15px;
+                }
+              
+                .menu-item > a.toggle-submenu::after {
+                  content: '▸';
+                  float: right;
+                  margin-left: 10px;
+                  font-size: 14px;
+                }
+              
+                .menu-item.open > a.toggle-submenu::after {
+                  content: '▾';
+                }
+              
+                .sub-menu li {
+                  margin: 5px 0;
+                }
+              }   
+        }
+        </style>
+
+
+        <!-- logo responsive for mobile and tab view -->
+	<style>
+		@media (max-width: 768px) {
+			.site-logo {
+				max-height: 100px !important;
+				width: auto !important;
+				margin-bottom: 20px;
+				/* This adds spacing below the logo */
+			}
+
+			.site-title-text {
+				overflow: hidden;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				height: 60px !important;
+				width: auto !important;
+				margin-bottom: 30px !important;
+				max-width: 100% !important;
+				object-fit: contain !important;
+				display: block !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-logo {
+				height: 60px !important;
+				width: auto !important;
+				margin-bottom: 30px !important;
+				max-width: 100% !important;
+				object-fit: contain !important;
+				display: block !important;
+
+				/* Position tweak */
+				transform: translate(-12px, -14px);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.site-branding-center {
+				overflow: visible !important;
+			}
+		}
+
+		@media (min-width: 1024px) {
+
+			/* Adjust based on the laptop screen size */
+			.site-logo {
+				transform: translate(-10px, 10px);
+				/* Shift logo down slightly */
+			}
+		}
+	</style>
+
 </head>
 
 <body data-rsssl="1"
@@ -1413,25 +1777,19 @@
                             <div class="site-branding-left">
                             </div>
 
-                            <!-- .site-branding-left -->
-                            <div class="site-title-text">
-                                <h1 class="site-title"> <a href="index.html" rel="home"> <span
-                                            class="screen-reader-text">
-                                            Train Lingua </span>
-                                        <h1 class="site-title"> <a href="index.html" rel="home"> <img src="logo.png"
-                                                    alt="Train Lingua Logo" class="site-logo" /> </a> </h1>
-                                        <!-- .site-title -->
-                            </div>
+                            <div class="site-branding-center"
+								style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px 15px; box-sizing: border-box; max-width: 100%; overflow: visible;">
+								<a href="../index.html" rel="home" class="site-title"
+									style="display: block; overflow: visible; text-decoration: none;">
+									<img src="logo.png" alt="Train Lingua Logo" class="site-logo"
+										style="max-width: 150px; width: 100%; height: auto; object-fit: contain; display: block; position: relative;" />
+									<span class="screen-reader-text">Train Lingua</span>
+								</a>
+								<p class="site-description" style="font-size: 14px; color: #666; margin-top: 5px;">Life
+									Coach</p>
+							</div>
 
-                            <!-- .search-container -->
-                            <div class="social-container widget-area"><a class="social-link facebook" target="_blank"
-                                href="#"></a><a class="social-link twitter" target="_blank" href="#"></a><a
-                                class="social-link instagram" target="_blank" href="#"></a><a
-                                class="social-link linkedin" target="_blank"
-                                href="https://www.linkedin.com/company/train-lingua/"></a>
-                        </div>
-
-                        <!-- .social-container -->
+                            <!-- .social-container -->
 
                             <!-- .site-branding-center -->
                             <!-- .site-branding-center -->
@@ -1530,74 +1888,17 @@
                                         <nav id="site-navigation" class="main-navigation site-navigation"
                                             role="navigation">
                                             <div class="menu-wrap">
-                                                <div class="layout-medium"><a class="menu-toggle"> <span
-                                                            class="lines"></span> </a>
-                                                    <!-- .menu-toggle --><a class="shopping-cart" href="cart/index.html"
-                                                        title="View your shopping cart"> </a>
-                                                    <!-- .shopping-cart -->
-                                                    <div class="nav-menu">
-                                                        <ul id="menu-mymenu" class="">
-                                                            <li id="menu-item-1642"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-254 current_page_item menu-item-1642">
-                                                                <a href="index.html" aria-current="page"
-                                                                    onClick="return true">Home</a>
-                                                            </li>
-                                                            <li id="menu-item-1360"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360">
-                                                                <a href="services/index.html"
-                                                                    onClick="return true">Start Here</a>
-                                                            </li>
-                                                            <li id="menu-item-1539"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539">
-                                                                <a href="courses/index.html"
-                                                                    onClick="return true">Courses</a>
-                                                            </li>
-                                                            <li id="menu-item-1358"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358">
-                                                                <a href="blog/index.html" onClick="return true">Blog</a>
-                                                            </li>
-                                                            <li id="menu-item-1828"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1828">
-                                                                <a href="shop/index.html" onClick="return true">About
-                                                                    Us</a>
-                                                            </li>
-                                                            <li id="menu-item-1359"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359">
-                                                                <a href="contact/index.html"
-                                                                    onClick="return true">Contact</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div> <a class="search-toggle toggle-link"></a>
-                                                    <div class="search-container">
-                                                        <div class="search-box" role="search">
-                                                            <form class="search-form" method="get"
-                                                                action="https://themes.pixelwars.org/efor/demo-06/">
-                                                                <label><span>
-                                                                        Search for </span>
-                                                                    <input type="search" id="search-field" name="s"
-                                                                        placeholder="type and hit enter">
-                                                                </label>
-                                                                <input type="submit" class="search-submit"
-                                                                    value="Search">
-                                                            </form>
+                                                <!-- .search-container -->
+                                                <div class="social-container widget-area"><a
+                                                    class="social-link facebook" target="_blank" href="#"></a><a
+                                                    class="social-link twitter" target="_blank" href="#"></a><a
+                                                    class="social-link instagram" target="_blank"
+                                                    href="#"></a><a class="social-link linkedin" target="_blank"
+                                                    href="#"></a>
+                                            </div>
 
-                                                            <!-- .search-form -->
-                                                        </div>
-
-                                                        <!-- .search-box -->
-                                                    </div>
-
-                                                    <!-- .search-container -->
-                                                    <div class="social-container widget-area"><a
-                                                            class="social-link facebook" target="_blank" href="#"></a><a
-                                                            class="social-link twitter" target="_blank" href="#"></a><a
-                                                            class="social-link instagram" target="_blank"
-                                                            href="#"></a><a class="social-link linkedin" target="_blank"
-                                                            href="#"></a>
-                                                    </div>
-
-                                                    <!-- .social-container -->
-                                                </div>
+                                            <!-- .social-container -->
+                                                
 
                                                 <!-- .layout-medium -->
                                             </div>
@@ -2182,28 +2483,11 @@
 
         </div>
         <footer id="colophon" class="site-footer" role="contentinfo">
-            <div class="footer-insta">
-                <div class="textwidget custom-html-widget">
-                    <div id="instagram-gallery-feed-0" class="instagram-gallery-feed"
-                        data-feed="{&quot;id&quot;:0,&quot;account_id&quot;:&quot;3621880887916450&quot;,&quot;source&quot;:&quot;username&quot;,&quot;tag&quot;:&quot;wordpress&quot;,&quot;order_by&quot;:&quot;top_media&quot;,&quot;layout&quot;:&quot;gallery&quot;,&quot;limit&quot;:12,&quot;columns&quot;:12,&quot;lazy&quot;:false,&quot;spacing&quot;:0,&quot;highlight&quot;:{&quot;tag&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;position&quot;:&quot;1,3,5&quot;},&quot;reel&quot;:{&quot;hide&quot;:false},&quot;copyright&quot;:{&quot;hide&quot;:false,&quot;placeholder&quot;:&quot;&quot;},&quot;profile&quot;:{&quot;display&quot;:false,&quot;auto&quot;:false,&quot;username&quot;:&quot;&quot;,&quot;nickname&quot;:&quot;&quot;,&quot;website&quot;:&quot;&quot;,&quot;biography&quot;:&quot;&quot;,&quot;link_text&quot;:&quot;Follow&quot;,&quot;website_text&quot;:&quot;Website&quot;,&quot;avatar&quot;:&quot;&quot;},&quot;box&quot;:{&quot;display&quot;:false,&quot;padding&quot;:1,&quot;radius&quot;:0,&quot;background&quot;:&quot;#fefefe&quot;,&quot;profile&quot;:false,&quot;desc&quot;:&quot;&quot;,&quot;text_color&quot;:&quot;#000000&quot;},&quot;mask&quot;:{&quot;display&quot;:false,&quot;background&quot;:&quot;#000000&quot;,&quot;likes_count&quot;:true,&quot;comments_count&quot;:true},&quot;card&quot;:{&quot;display&quot;:false,&quot;radius&quot;:1,&quot;font_size&quot;:12,&quot;background&quot;:&quot;#ffffff&quot;,&quot;background_hover&quot;:&quot;#ffffff&quot;,&quot;text_color&quot;:&quot;#000000&quot;,&quot;padding&quot;:5,&quot;likes_count&quot;:true,&quot;text_length&quot;:10,&quot;comments_count&quot;:true,&quot;text_align&quot;:&quot;left&quot;},&quot;carousel&quot;:{&quot;slidespv&quot;:5,&quot;centered_slides&quot;:false,&quot;autoplay&quot;:false,&quot;autoplay_interval&quot;:3000,&quot;navarrows&quot;:true,&quot;navarrows_color&quot;:&quot;&quot;,&quot;pagination&quot;:true,&quot;pagination_color&quot;:&quot;&quot;},&quot;modal&quot;:{&quot;display&quot;:false,&quot;profile&quot;:false,&quot;media_description&quot;:true,&quot;likes_count&quot;:true,&quot;comments_count&quot;:true,&quot;text_align&quot;:&quot;left&quot;,&quot;modal_align&quot;:&quot;right&quot;,&quot;text_length&quot;:10000,&quot;font_size&quot;:12},&quot;button&quot;:{&quot;display&quot;:false,&quot;text&quot;:&quot;View on Instagram&quot;,&quot;text_color&quot;:&quot;#ffff&quot;,&quot;background&quot;:&quot;&quot;,&quot;background_hover&quot;:&quot;&quot;},&quot;button_load&quot;:{&quot;display&quot;:false,&quot;text&quot;:&quot;Load more...&quot;,&quot;text_color&quot;:&quot;#ffff&quot;,&quot;background&quot;:&quot;&quot;,&quot;background_hover&quot;:&quot;&quot;}}">
-                        <!-- <FeedContainer/> -->
-                    </div>
-                </div>
-            </div>
-            <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank"
-                title="Chat with us on WhatsApp">
-                <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" />
-            </a>
-
-            <!-- .footer-insta -->
-            <div class="site-info">
-                <div class="textwidget">
-                    <p>2025 trainlingua &#8211; All Rights Reserved</p>
-                </div>
-            </div>
-
-            <!-- .site-info -->
-        </footer>
+			<div class="footer-container">
+				<hr class="footer-line" />
+				<p>© 2025 <span class="brand-name">Train Lingua</span> – All Rights Reserved</p>
+			</div>
+		</footer>
 
         <!-- #colophon .site-footer -->
     </div>
@@ -2930,6 +3214,49 @@
     <script type="text/javascript"
         src="wp-content/plugins/jet-popup/includes/elementor/assets/js/jet-popup-elementor-frontend3c89.js?ver=2.0.11"
         id="jet-popup-elementor-frontend-js"></script>
+
+
+    <!-- exam responsive menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleLinks = document.querySelectorAll("a.toggle-submenu");
+
+            toggleLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+
+                        const parentLi = this.closest(".menu-item");
+                        const submenu = parentLi.querySelector(".sub-menu");
+
+                        // Close others
+                        document.querySelectorAll(".menu-item.open").forEach(item => {
+                            if (item !== parentLi) {
+                                item.classList.remove("open");
+                            }
+                        });
+
+                        // Toggle this
+                        parentLi.classList.toggle("open");
+                    }
+                });
+            });
+
+            // Click outside to close
+            document.addEventListener("click", function (e) {
+                if (window.innerWidth <= 1024) {
+                    const isClickInside = e.target.closest(".menu-item");
+                    if (!isClickInside) {
+                        document.querySelectorAll(".menu-item.open").forEach(item => {
+                            item.classList.remove("open");
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+
 </body>
 <!-- Mirrored from themes.pixelwars.org/efor/demo-06/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Mar 2025 18:01:13 GMT -->
 
